@@ -1,4 +1,3 @@
-I apologize for the previous formatting issues. I will now provide the full, raw Markdown code for your `README.md` file within a text block so you can copy it directly without any truncation.
 
 # The Solar Flare Pulse: Stochastic Signal Recovery
 
@@ -6,14 +5,14 @@ I apologize for the previous formatting issues. I will now provide the full, raw
 
 This project implements a **Bayesian Parameter Estimation** pipeline to recover the physical properties of a stellar flare event from heavily noise-corrupted time-series data.
 
-Developed as part of the **Stellar Signal Recovery Challenge**, the solution utilizes a **Metropolis-Hastings Markov Chain Monte Carlo (MCMC)** algorithm to reconstruct latent parameters despite significant stochastic noise and signal dropouts. A key innovation of this implementation is the development of a robust **Mixed Error Model** to resolve numerical stability issues inherent in relative error models at signal zero-crossings.
+Developed as part of the **Simulation Rush** [By Elan and nVision] , the solution utilizes a **Metropolis-Hastings Markov Chain Monte Carlo (MCMC)** algorithm to reconstruct latent parameters despite significant stochastic noise and signal dropouts. A key innovation of this implementation is the development of a robust **Mixed Error Model** to resolve numerical stability issues inherent in relative error models at signal zero-crossings.
 
 ##  Key Features
 
-* **Robust Likelihood Function:** Implements a mathematically rigorous "Mixed Error Model" () to prevent singularity divergence at .
-* **Automated Noise Calibration:** Utilizes global optimization (Differential Evolution) nested within a root-finding algorithm to statistically determine the optimal instrumental noise floor ().
+* **Robust Likelihood Function:** Implements a mathematically rigorous "Mixed Error Model" () to preven
+* **Automated Noise Calibration:** Utilizes stochastic global optimization (Differential Evolution) nested within a root-finding algorithm to statistically determine the optimal instrumental noise floor ().
 * **Adaptive MCMC Strategy:** Features a pilot tuning phase using Robbins-Monro stochastic approximation to learn the parameter covariance structure, followed by a stationary Metropolis-Hastings production run.
-* **Precision MAP Estimation:** Extracts Maximum A Posteriori (MAP) estimates using L-BFGS-B optimization for high-precision reporting.
+* **Precision MAP Estimation:** Extracts Maximum A Posteriori (MAP) estimates using guassian KDE
 
 ---
 
@@ -22,7 +21,7 @@ Developed as part of the **Stellar Signal Recovery Challenge**, the solution uti
 ```text
 .
 ├── flare_data.csv       # Input: The noisy time-series sensor data
-├── main.py              # Main: Complete analysis pipeline (Optimization + MCMC)
+├── Solution.ipynb       # Main: Complete analysis pipeline (Optimization + MCMC)
 ├── README.md            # Documentation: Project overview and usage
 ├── requirements.txt     # Dependencies: Python libraries required
 └── output/              # Output: Generated visualization artifacts
