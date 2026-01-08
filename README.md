@@ -26,13 +26,14 @@ Developed as part of the **Simulation Rush** [By Elan and nVision] , the solutio
 ├── Solution.ipynb       # Main: Complete analysis pipeline (Optimization + MCMC)
 ├── README.md            # Documentation: Project overview and usage
 ├── requirements.txt     # Dependencies: Python libraries required
-├── README.md            # Documentation: Project overview and usage
 ├ SIMULATION RUSH PS.pdf # Documentation: Original Problem statement for the project
 ├Simulation_Rush_Report.pdf # Documentation: project report
 └── output/              # Output: Generated visualization artifacts
-    ├── trace_plot.png       # MCMC chain convergence plots
-    ├── posterior_hist.png   # Posterior probability distributions
-    └── fit_check.png        # Final model fit vs. raw data
+    ├── Sigma_burnin.jpg     # Robbins Monro MCMC sigma vs. iterations
+    ├── Traceplot.jpg        # Traceplots of MH MCMC to check convergence
+    ├── posterior_distribution.jpg # Posterior probability distributions of the three parameters (kdeplots)
+    └── fit_check.jpg #final model (with MAP parameters) vs. raw data
+
 
 ```
 
@@ -42,7 +43,7 @@ Developed as part of the **Simulation Rush** [By Elan and nVision] , the solutio
 
 ### 1. Prerequisites
 
-Ensure you have **Python 3.8** or higher installed.
+Ensure you have **Python 3.13** or higher installed.
 
 ### 2. Environment Setup
 
