@@ -24,6 +24,9 @@ Developed as part of the **Simulation Rush** [By Elan and nVision] , the solutio
 ├── Solution.ipynb       # Main: Complete analysis pipeline (Optimization + MCMC)
 ├── README.md            # Documentation: Project overview and usage
 ├── requirements.txt     # Dependencies: Python libraries required
+├── README.md            # Documentation: Project overview and usage
+├ SIMULATION RUSH PS.pdf # Documentation: Original Problem statement for the project
+├Simulation_Rush_Report.pdf # Documentation: project report
 └── output/              # Output: Generated visualization artifacts
     ├── trace_plot.png       # MCMC chain convergence plots
     ├── posterior_hist.png   # Posterior probability distributions
@@ -56,7 +59,7 @@ source venv/bin/activate
 ```
 If you're using Conda for your environment instead 
 ```bash
-# Create virtual environment
+# Create virtual environment in (conda prompt)
 conda create --name <env_name> python=3.13.5
 conda activate <env_name>
 
@@ -85,9 +88,10 @@ pip install -r requirements.txt
 The script performs the following steps automatically:
 
 1. **Noise Floor Optimization:** Solves for the instrumental noise floor parameter  such that the Reduced Chi-Squared statistic equals 1.0.
-2. **MCMC Sampling:** Initializes a Metropolis-Hastings sampler at the global optimum and runs for 400,000 iterations.
-3. **Sanity Check:** Validates the derived model against the raw data.
-4. **Visualization:** Generates and saves plots to the `output/` directory.
+2. **Pilot Tuning** : Initializes and runs Robbins-Monro MCMC and uses the results to generate a covariance matrix
+3. **MCMC Sampling:** Initializes a Metropolis-Hastings sampler and runs for 400,000 iterations.
+4. **Sanity Check:** Validates the derived model against the raw data.
+5. **Visualization:** Generates and saves plots to the `output/` directory.
 
 ---
 
