@@ -12,7 +12,7 @@ Developed as part of the **Simulation Rush** [By Elan and nVision] , the solutio
 ##  Key Features
 
 * **Robust Likelihood Function:** Implements a mathematically rigorous "Mixed Error Model" () to preven
-* **Automated Noise Calibration:** Utilizes stochastic global optimization (Differential Evolution) nested within a root-finding algorithm to statistically determine the optimal instrumental noise floor ().
+* **Automated Noise Calibration:** Utilizes stochastic global optimization (Differential Evolution) nested within a root-finding algorithm(brentq) to statistically determine the optimal instrumental noise floor ().
 * **Adaptive MCMC Strategy:** Features a pilot tuning phase using Robbins-Monro stochastic approximation to learn the parameter covariance structure, followed by a stationary Metropolis-Hastings production run.
 * **Precision MAP Estimation:** Extracts Maximum A Posteriori (MAP) estimates using guassian KDE
 
@@ -110,13 +110,13 @@ $S(t; A, \tau, \omega) = A e^t \left[ 1 - \tanh(2(t - \tau)) \right] \sin(\omega
 
 The problem statement specifies a relative error model . This creates a mathematical trap where  as , causing the Likelihood function to diverge to infinity at zero-crossings.
 
-**Our Solution:** We implemented a **Mixed Error Model**:
+**My Solution:** I implemented a **Mixed Error Model**:
 
 $\sigma_i = 0.2 \cdot |y_i| + \sigma_{\text{floor}}$
 
 (where $\sigma_{\text{floor}} = k \cdot \sigma_{\text{data}}$)
 
-We numerically solved for the hyperparameter (k), which stabilizes the likelihood function and ensures the error bars are physically consistent with the observed data variance.
+I numerically solved for the hyperparameter (k), which stabilizes the likelihood function and ensures the error bars are physically consistent with the observed data variance.
 
 ---
 
