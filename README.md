@@ -1,6 +1,6 @@
 
 # The Solar Flare Pulse: Stochastic Signal Recovery
-![Python Version](https://img.shields.io/badge/python-3.13.5%2B-blue)
+![Python Version](https://img.shields.io/badge/python-3.13%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-complete-success)
 ##  Project Overview
@@ -23,7 +23,8 @@ Developed as part of the **Simulation Rush** [By Elan and nVision] , the solutio
 ```text
 .
 ├── flare_data.csv       # Input: The noisy time-series sensor data
-├── Solution.ipynb       # Main: Complete analysis pipeline (Optimization + MCMC)
+├── Solution.ipynb       # Main: Complete analysis pipeline (Optimization + MCMC+ Visualisation)
+├── LICENSE              # License: MIT License, used for this repository
 ├── README.md            # Documentation: Project overview and usage
 ├── requirements.txt     # Dependencies: Python libraries required
 ├ SIMULATION RUSH PS.pdf # Documentation: Original Problem statement for the project
